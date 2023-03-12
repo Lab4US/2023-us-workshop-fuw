@@ -20,9 +20,10 @@ Email: <[hello@lab4us.eu](mailto:hello@lab4us.eu)>
 * Podstawy fizyki.
 * Podstawy programowania w PYTHON.
 
-
 <hr/>
-Ultrasound-Workshop for the FUW (Faculty of Physics, University of Warsaw)
+
+***US-Workshop*** (i.e. "Ultrasound Workshop") is a series of 3 meetings consisting of a lecture and an exercise part.
+The workshop has been prepared as part of the [Lab4US](https://lab4us.eu) initiative and is hosted at the Faculty of Physics, University of Warsaw.
 
 <br/>
 
