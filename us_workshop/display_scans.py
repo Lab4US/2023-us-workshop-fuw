@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from scipy.fft import fft, fftshift
 from scipy.signal import iirfilter, lfilter
-from envelop_detection import *
+from us_workshop.envelop_detection import *
 
 # CONST
 SF = 65e6           # Sampling Frequency
