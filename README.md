@@ -41,14 +41,15 @@ Repozytorium zostało przygotowane tak, aby swobodnie poruszać się w nim zaró
 W przypadku drugiej opcji, należy wykonać dodatkowo kroki zawarte poniżej (wymagane jest posiadanie konta Google).
 
 1. Otwórz notebook w Google Colab. W tym celu przejdź do strony https://colab.research.google.com/. Gdy pojawi się UI, kliknij w zakładkę GitHub i wpisz URL tego repozytorium. Następnie wybierz notebook danego ćwiczenia.
-2. Dodaj na początku nową komórkę i wpisz do niej poniższe komendy. Uruchom.
+2. Dodaj na początku nową komórkę i wpisz do niej poniższą komendę. Uruchom.
 ```
 ! git clone https://github.com/Lab4US/2023-us-workshop-fuw
-
+```
+3. W kolejnej komórce wykonaj komendę.
+```
 cd /content/2023-us-workshop-fuw/notebooks/
 ```
-3. Po tych krokach możesz swobodnie uruchamiać pozostałe komórki w kodzie.
-
+Po tych krokach możesz swobodnie uruchamiać pozostałe komórki w kodzie.
 
 <br/>
 <hr/>
