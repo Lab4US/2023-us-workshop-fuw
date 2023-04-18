@@ -31,7 +31,7 @@ def LP_filtration(sig, t, fs, cutoff_freq, disp_option=0, raw_sig=[]):
     y_filtered = lfilter(b, a, sig)
 
     if len(raw_sig) and disp_option:
-        plt.figure(figsize=[6.4, 2.4])
+        plt.figure(figsize=[6.4, 3.4])
         plt.plot(t, raw_sig, label="Raw signal")
         plt.plot(t, y_filtered, label="LP filter (detected envelope)")
         plt.xlabel("Time [s]")
@@ -93,7 +93,7 @@ def asynchronous_real_square_law(AM, t, fs, cutoff_freq, display=1):
     output = np.sqrt(y_filtered)
 
     if display == 1:
-        plt.figure(figsize=[6.4, 2.4])
+        plt.figure(figsize=[6.4, 3.4])
         plt.plot(t, sig, label="Raw signal")
         plt.plot(t, output, label="Detected envelope")
         plt.xlabel("Time [s]")
@@ -183,7 +183,7 @@ def asynchronous_complex_V1_osci(Ac, fc, m, ym, Am, t, fs, cutoff_freq, display=
     sig = s1_filtered ** 2 + s2_filtered**2
     output = np.sqrt(sig)
     if display == 1:
-        plt.figure(figsize=[6.4, 2.4])
+        plt.figure(figsize=[6.4, 3.4])
         plt.plot(t, AM_temp, label="Raw signal")
         plt.plot(t, output, label="Detected envelope)")
         plt.xlabel("Time [s]")

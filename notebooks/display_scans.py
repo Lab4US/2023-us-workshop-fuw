@@ -35,7 +35,7 @@ def display_Ascan(data, norm=False, sample_offset=0):
 
 def display_Bmode_from_RF(data, dynamic_range=100, sample_offset=0):
     """ Display B-mode image from RF signal. """
-    fig, axs = plt.subplots(figsize=(18, 13))
+    fig, axs = plt.subplots(figsize=(13, 8))
     imB = axs.imshow(data.copy().T, cmap='viridis', aspect=0.05)
     fig.colorbar(imB)
     imB.set_clim(vmin=-dynamic_range, vmax=dynamic_range)
@@ -47,35 +47,35 @@ def display_Bmode_from_RF(data, dynamic_range=100, sample_offset=0):
     axs.yaxis.set_major_formatter(ticks_y)
 
 
-def display_video_env_detect(data, selected_func, dynamic_range=500, n_scan_display=1, sample_offset=0):
+def display_video_env_detect(data, selected_func, cutoff_freq=0.1*SF, dynamic_range=500, n_scan_display=1, sample_offset=0):
     """ 
     Display signal after Envelop Detection (aka 'Video')
-    Input:
-        data                    matrix with RF signal 
-        selected_func           function selected from envelop_functions: possible only without local oscilators,
-                                synchronous_real, asynchronous_complex_osci V1 and V2 are forbidden
-        dynamic range           max value to visualize (necessary for colorbar)
-        n_scan_display          number of scan line which will be plotted
-        sample_offset             sample from which signal should be cut to remove noise
+    ARGS:
+        data - matrix with RF signal 
+        selected_func - function selected from envelop_functions: possible only without local oscilators,
+                        synchronous_real, asynchronous_complex_osci V1 and V2 are forbidden
+        cutoff_freq - cuttoff frequency for LP filter in selected_func
+        dynamic range - max value to visualize (necessary for colorbar)
+        n_scan_display - number of scan line which will be plotted
+        sample_offset - sample from which signal should be cut to remove noise
     """
     arrV = data.copy()
-    for n_scan in range(data.shape[0]):
-        t = np.arange(len(data[n_scan, :]))
-        # TO DO: check if frequency is correct, how to interpret
-        f_s = 1/np.diff(t)[0]
 
+    for n_scan in range(data.shape[0]):
+
+        t = np.arange(len(data[n_scan, :]))/SF
         if n_scan == n_scan_display:
             output = selected_func(
-                data[n_scan, :], t, f_s, cutoff_freq=0.2, display=1)
+                data[n_scan, :], t, SF, cutoff_freq=cutoff_freq, display=1)
         else:
             output = selected_func(
-                data[n_scan, :], t, f_s, cutoff_freq=0.2, display=0)
+                data[n_scan, :], t, SF, cutoff_freq=cutoff_freq, display=0)
 
         if n_scan == n_scan_display:
             plt.figure(figsize=[6, 4])
-            plt.plot(t, data[n_scan, :], label="Raw signal")
-            plt.plot(t, output, label="Detected envelope")
-            plt.xlabel("Time [s]")
+            plt.plot(1e6 * t, data[n_scan, :], label="Raw signal")
+            plt.plot(1e6 * t, output, label="Detected envelope")
+            plt.xlabel("Time [us]")  # [in microseconds]
             plt.ylabel("Amplitude")
             plt.legend(loc="lower center", bbox_to_anchor=[0.5, 1],
                        ncol=2, fontsize="smaller")
