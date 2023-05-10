@@ -27,12 +27,11 @@ Email: <[hello@lab4us.eu](mailto:hello@lab4us.eu)>
 * Środowisko Python-Jupyter lub konto na [Google Colab](https://colab.research.google.com/).
 
 ## KONTENT
+**Pliki ze wszystkimi danymi do ćwiczeń (ze względu na ich wielkość) dostępne są na [DROPBOX](https://www.dropbox.com/scl/fo/9roxco1hwt7mictip7npj/h?dl=0&rlkey=rjsj7xm3jygxgbiqky2vafemj).**
 ### Spotkanie #1: ULTRADŹWIĘKI PODSTAWY
 Podstawy fizyczne metod ultradźwiękowych oraz zastosowania ultradźwięków w medycynie i przemyśle.
 
 ### Spotkanie #2: ULTRADŹWIĘKOWA METODA DOPPLERA
-Technika Doppler dla fal ultradźwiękowych do oceny przepływu krwi.
-
 ### Spotkanie #3: OBRAZOWANIE ULTRADŹWIĘKOWE
 Podstawy medycznego obrazowania ultradźwiękowego - czyli ultrasonografia (USG).
 
