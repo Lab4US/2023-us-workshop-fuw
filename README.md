@@ -28,6 +28,9 @@ Email: <[hello@lab4us.eu](mailto:hello@lab4us.eu)>
 
 ## KONTENT
 **Pliki ze wszystkimi danymi do ćwiczeń (ze względu na ich wielkość) dostępne są na [DROPBOX](https://www.dropbox.com/scl/fo/9roxco1hwt7mictip7npj/h?dl=0&rlkey=rjsj7xm3jygxgbiqky2vafemj).**
+
+[![SLAJDY](figs/2023-US-Workshop-slides.png)](https://www.canva.com/design/DAFVBRodqto/7Ie25Qm2JnTU5s8kc5VzAg/view)
+
 ### Spotkanie #1: ULTRADŹWIĘKI PODSTAWY
 Podstawy fizyczne metod ultradźwiękowych oraz zastosowania ultradźwięków w medycynie i przemyśle.
 
